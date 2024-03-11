@@ -1,0 +1,40 @@
+		body {
+			background-color: #000000;
+			height: 100vh;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.raindrop {
+			position: absolute;
+			bottom: 1000%;
+			width: 1px;
+			height: 20px;
+			background-color: rgb(255, 0, 0);
+			border-radius: 0 0 5px 5px;
+			animation: raindrop 2s linear infinite;
+			animation-delay: calc(0.05s * var(--n));
+		}
+
+		@keyframes raindrop {
+			0% {
+				bottom: 100%;
+			}
+			100% {
+				bottom: -100px;
+			}
+		}
+
+    h1{
+			color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
